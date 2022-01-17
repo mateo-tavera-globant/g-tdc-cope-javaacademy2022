@@ -1,24 +1,89 @@
 /*
- * SumAverageRunningInt
- *
- * 1/17/2022
- *
- * Mateo Tavera
-*/
-
+SumAverageRunningInt
+Mateo Tavera
+1/17/2022
+ */
 package decision_and_loop;
-
+/** Write a program called SumAverageRunningInt to produce the sum of 1, 2, 3, ..., to n.
+ */
 public class SumAverageRunningInt {
-    /*Write a program called SumAverageRunningInt to produce the sum of 1, 2, 3, ..., to 100.
-      Store 1 and 100 in variables lowerbound and upperbound,
-      so that we can change their values easily.
-      Also compute and display the average. The output shall look like:
-     */
+
     public static void main(String[] args) {
 
-    int lowerbound = 1;
-    int upperbound = 100;
+        //Input
+        final int LOWERBOUND = 1;
+        final int UPPERBOUND = 100;
+        int sumFor = 0;
+        int sumSquareFor = 0;
+        float average = 0;
+        int count = 0; //For the average calculation
+
+        //Using a For Loop to calculate sum from LOWERBOUND to UPPERBOUND
+        for (int i = LOWERBOUND; i <= UPPERBOUND; i++) {
+            sumFor = sumFor + i;
+            count++;
+        }
+        //Calculate average
+        average = (float) sumFor / (float)(count);
+
+        //Output
+        System.out.println("Using For Loop:");
+        System.out.println("The sum of " + LOWERBOUND + " to " + UPPERBOUND + " is " + sumFor);
+        System.out.println("The average is " + average + "\n");
 
 
+        //Using a While Loop to calculate sum from LOWERBOUND to UPPERBOUND
+        int i = LOWERBOUND; //Set index for the while loop
+        int sumWhile = 0;
+        count = 0; //Reset counter
+
+        while (i <= UPPERBOUND) {
+            sumWhile = sumWhile + i;
+            count++;
+            i++;
+        }
+
+        //Calculate average
+        average = (float) sumWhile / (float) count;
+
+        //Output
+        System.out.println("Using While Loop:");
+        System.out.println("The sum of " + LOWERBOUND + " to " + UPPERBOUND + " is " + sumWhile);
+        System.out.println("The average is " + average + "\n");
+
+
+
+    //Using a Do-While Loop to calculate sum from LOWERBOUND to UPPERBOUND
+     i = LOWERBOUND; //Set index for the do-while loop
+    int sumDoWhile = 0;
+    count = 0; //Reset counter
+
+    do {
+        sumDoWhile += i;
+        count++;
+        ++i;
+    } while (i <= UPPERBOUND);
+
+    //Calculate average
+    average =(float)sumDoWhile /(float)(count);
+
+    //Output
+        System.out.println("Using Do-While Loop:");
+        System.out.println("The sum of "+LOWERBOUND +" to "+UPPERBOUND +" is "+sumWhile);
+        System.out.println("The average is "+average +"\n");
     }
+
+    /** What is the difference between "for" and "while-do" loops?
+     *
+     * answer: For loops we know the number of iteretions te programs should do,
+     * but in While loops, the iterations are done according to a boolean parameter and we
+     * usually don't know how many times
+     *
+     * What is the difference between "while-do" and "do-while" loops?
+     *
+     * answer: A while-do loop may not do any iteration, but with the do-while,
+     * we make at least one iteration
+     */
 }
+
+
