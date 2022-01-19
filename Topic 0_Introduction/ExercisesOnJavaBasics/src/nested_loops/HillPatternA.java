@@ -47,7 +47,7 @@ public class HillPatternA {
                 if ((col + row >= height-1) && (col<height)){ //First half of the hill
                     System.out.print("#");
                 }
-                else if ((col-row <= height-1) && (col >= height)){ //Seconf half of the hill
+                else if ((col-row <= height-1) && (col >= height)){ //Second half of the hill
                     System.out.print("#");
                 }
                 else{
