@@ -29,7 +29,7 @@ public class CacheMemory {
                 System.out.print(id + " - " + dataBase.get(dataBase.indexOf(id) + 1));
                 System.out.println(" (from datbase)");//To see from where we are getting the data
             }
-            else if (id == ""){
+            else if (id == ""){//Finish the infinite loop
                 System.out.println("Closing program...");
             }
             else{
@@ -38,16 +38,7 @@ public class CacheMemory {
 
         }
 
-
     }
 
-
-
-
-        //for (int data = 0; data < dataBase.size(); data++) {
-
-          //  System.out.println(dataBase.get(data));
-        //}
-        //System.out.println(cacheMemory);
     }
 }
