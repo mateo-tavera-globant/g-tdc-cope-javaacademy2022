@@ -5,9 +5,6 @@ Mateo Tavera
 Array-Loop practice
  */
 package tutoria_1;
-
-import java.util.Arrays;
-
 /** Write a program which calculate how many movements should we do in order to
  * get all columns of a wall to be the same size. Represent the wall with an array and each column with
  * an integer:

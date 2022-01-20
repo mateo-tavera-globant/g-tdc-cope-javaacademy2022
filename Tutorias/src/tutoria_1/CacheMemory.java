@@ -1,5 +1,13 @@
+/*
+CacheMemory
+Mateo Tavera
+20/01/2022
+Array-HashMap practice
+ */
 package tutoria_1;
-
+/** Write a program which simulates the performance of a cache memory
+ * define an array list as a database and a hashmap as the cache
+ */
 import java.util.*;
 
 public class CacheMemory {
