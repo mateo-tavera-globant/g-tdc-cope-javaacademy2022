@@ -6,12 +6,6 @@ public class Memory {
    final int COLUMNS=10;//10
    final int ROWS=20;//20
 
-    Memory(){
-
-    }
-   // String [][] memory = new String[ROWS][COLUMNS];
-
-
 public void buildMemory(ArrayList<GeneralProcess> process){
     String [][] memory = new String[ROWS][COLUMNS];
     int k=0;
