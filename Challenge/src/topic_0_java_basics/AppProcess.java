@@ -1,3 +1,8 @@
+/*
+Memory Simulator
+Mateo Tavera
+01/26/2022
+ */
 package topic_0_java_basics;
 
 public class AppProcess extends GeneralProcess{

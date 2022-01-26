@@ -1,4 +1,17 @@
+/*
+Memory Simulator
+Mateo Tavera
+01/26/2022
+ */
+
 package topic_0_java_basics;
+/**This program simulates a 200 slots memory to store two types of process:
+ * Application process and System Process
+ * Each process has an ID and the possibility to be deleted at any moment
+ * Once a process is deleted, the memory is compressed and all stored values move to the bottom
+ * of the structure
+ *
+ */
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -29,7 +42,7 @@ public class Main extends ArrayList<GeneralProcess> {//To use the protected meth
             menu = scanner.next();//Register the option form the menu
 
             //Use Nested-If's to decide what to do
-            if (menu.equals("ca")) {//application process cration
+            if (menu.equals("ca")) {//application process creation
                 AppProcess ca = new AppProcess();//generates the object
                 id = ca.getID();
                 memoryGenerated = ca.getStorage();
@@ -40,17 +53,16 @@ public class Main extends ArrayList<GeneralProcess> {//To use the protected meth
                     for (int i = 0; i < memoryGenerated; i++)
                         process.add(ca);//Add in the ArrayList the number of processes
 
-                    memoryUsed += memoryGenerated;//Update the memory avalable
-                    System.out.println("memoria acumuladaCA = " + memoryUsed);
-                    System.out.println(process);
-                    memory.buildMemory(process);
+                    memoryUsed += memoryGenerated;//Update the memory available
+                    System.out.println("Memory Available: " + (MEMORY_AVAILABLE - memoryUsed));
+                    memory.buildMemory(process);//Construct the memory according to processes created
                 } else {
                     System.out.println("Insufficient memory...");
                 }
             }
+            //Same structure as the application process
             else if(menu.equals("cs")) {
                     SystemProcess cs = new SystemProcess();
-                    // sys.add(cs);
                     id = cs.getID();
                     memoryGenerated = cs.getStorage();
                 System.out.println("cs00" +id+" requires "+ memoryGenerated + " slots in memory");
@@ -59,40 +71,39 @@ public class Main extends ArrayList<GeneralProcess> {//To use the protected meth
                         for (int i = 0; i < memoryGenerated; i++)
                             process.add(cs);
                         memoryUsed += memoryGenerated;
-                        System.out.println("memoria acumuladaCA = " + memoryUsed);
-                        System.out.println(process);
+                        System.out.println("Memory Available: " + (MEMORY_AVAILABLE - memoryUsed));
                         memory.buildMemory(process);
                     } else {
                         System.out.println("Insufficient memory...");
                     }
                 }
 
+            //Takes only the first character of the input value to access this block
             else if(menu.substring(0,1).equals("d")) {
 
 
-                int rangeMin = -1;
-                int rangeMax = -1;
-                id = Integer.parseInt(menu.substring(1));
-
-                for (int i = 0; i < process.size(); i++) {
-                    if ((rangeMin < 0) && (process.get(i).getID() == id)) {
+                int rangeMin = -1;//to be set in the loop
+                int rangeMax = -1;//to be set in the loop
+                id = Integer.parseInt(menu.substring(1));//Takes the rest of characters of the input value
+                //Using for loop to get the range of processes we would like to delete
+                for (int i = 0; i < process.size(); i++) {//i=0,1,2..total of processes
+                    if ((rangeMin < 0) && (process.get(i).getID() == id)) {//Get the first process we need to delete
                         rangeMin = i;
-                    } else if (((rangeMax < 0)
+                    } else if (((rangeMax < 0)//Get the las process we need to delete
                             && (process.get(i).getID() != id)
                             && (rangeMin >= 0))) {
                         rangeMax = i;
-                    } else if (i+1== process.size()&&(rangeMax<0)) {
+                    } else if (i+1== process.size()&&(rangeMax<0)) {//Get the las process we need to delete
                         rangeMax = i+1;
                     }
                 }
-
+                    //Using the removeRange method to take out given values from the ArrayList
                     process.removeRange(rangeMin, rangeMax);
-                    memoryUsed-=rangeMax-rangeMin;
-                    memory.buildMemory(process);
+                    memoryUsed-=rangeMax-rangeMin;//Update memory available
+                    memory.buildMemory(process);//Re-construct the memory according to processes deleted
 
             }
-
-            else
+            else//Wrong input
                 System.out.println("Input is not valid. Try again\n");
 
 

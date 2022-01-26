@@ -1,10 +1,18 @@
+/*
+Memory Simulator
+Mateo Tavera
+01/26/2022
+ */
 package topic_0_java_basics;
+/**This class takes a list of processes and organizes them in a 20x10 Matrix
+ */
 
 import java.util.ArrayList;
 
 public class Memory {
-   final int COLUMNS=10;//10
-   final int ROWS=20;//20
+    //Constant Inputs
+   final int COLUMNS=10;
+   final int ROWS=20;
 
 public void buildMemory(ArrayList<GeneralProcess> process){
     String [][] memory = new String[ROWS][COLUMNS];
