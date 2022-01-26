@@ -1,7 +1,6 @@
 package topic_0_java_basics;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class Memory {
    final int COLUMNS=10;//10
@@ -13,33 +12,35 @@ public class Memory {
    // String [][] memory = new String[ROWS][COLUMNS];
 
 
-public void buildMemory(ArrayList<GeneralProcess> objetos, GeneralProcess process, int memoryUsage){
+public void buildMemory(ArrayList<GeneralProcess> process){
     String [][] memory = new String[ROWS][COLUMNS];
     int k=0;
+    int id = 0;
     for (int i=0;i<ROWS;i++){
 
         for (int j=0;j<COLUMNS;j++){
 
-            if((k<objetos.size())&&(objetos.get(k) instanceof AppProcess)){
-                memory[i][j] = "a00"+objetos.get(i).getID();
+            if((k<process.size())&&(process.get(k) instanceof AppProcess)){
+                id = process.get(k).getID();
+                memory[i][j] = "a00"+id;
             }
-            else if((k<objetos.size())&&(objetos.get(k) instanceof SystemProcess)) {
-                memory[i][j] = memory[i][j] = "s00"+objetos.get(i).getID();
+            else if((k<process.size())&&(process.get(k) instanceof SystemProcess)) {
+                id = process.get(k).getID();
+                memory[i][j] = memory[i][j] = "s00"+id;
             }
             else
                 memory[i][j] = memory[i][j] = "****";
             k++;
+
+        }
+
+    }
+   for (int i=ROWS-1;i>=0;i--){
+        for (int j=COLUMNS-1;j>=0;j--){
             System.out.print(memory[i][j] + " ");
-            //System.out.print("(" + memory[i][j] + " k: " + k + ")");
         }
         System.out.println("");
     }
-   // for (int i=0;i<ROWS;i++){
-     //   for (int j=0;j<COLUMNS;j++){
-       //     System.out.print(memory[i][j] + " ");
-        //}
-        //System.out.println("");
-   // }
 
 }
 
