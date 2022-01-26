@@ -2,7 +2,7 @@ package topic_0_java_basics;
 
 public class SystemProcess extends GeneralProcess{
     int minValue = 5;//5
-    int maxValue = 7;//15
+    int maxValue = 15;//15
 
     @Override
     public int getStorage() {

@@ -1,8 +1,8 @@
 package topic_0_java_basics;
 
 public class AppProcess extends GeneralProcess{
-    int minValue = 1;//10
-    int maxValue = 5;//20
+    int minValue = 10;//10
+    int maxValue = 20;//20
 
     @Override
     public int getStorage() {
