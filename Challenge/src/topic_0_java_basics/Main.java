@@ -102,9 +102,11 @@ public class Main extends ArrayList<GeneralProcess> {//To use the protected meth
                     memoryUsed -= rangeMax - rangeMin;//Update memory available
                     memory.buildMemory(process);//Re-construct the memory according to processes deleted
                 }
-                catch (ArrayIndexOutOfBoundsException e){
+                catch (Exception e){
                     System.out.println("Invalid option. Please select another one\n");
                 }
+
+
             }
             else//Wrong input
                 System.out.println("Input is not valid. Try again\n");
