@@ -81,27 +81,30 @@ public class Main extends ArrayList<GeneralProcess> {//To use the protected meth
             //Takes only the first character of the input value to access this block
             else if(menu.substring(0,1).equals("d")) {
 
-
-                int rangeMin = -1;//to be set in the loop
-                int rangeMax = -1;//to be set in the loop
-                id = Integer.parseInt(menu.substring(1));//Takes the rest of characters of the input value
-                //Using for loop to get the range of processes we would like to delete
-                for (int i = 0; i < process.size(); i++) {//i=0,1,2..total of processes
-                    if ((rangeMin < 0) && (process.get(i).getID() == id)) {//Get the first process we need to delete
-                        rangeMin = i;
-                    } else if (((rangeMax < 0)//Get the las process we need to delete
-                            && (process.get(i).getID() != id)
-                            && (rangeMin >= 0))) {
-                        rangeMax = i;
-                    } else if (i+1== process.size()&&(rangeMax<0)) {//Get the las process we need to delete
-                        rangeMax = i+1;
+                try {//Avoid typing wrong id or id already deleted
+                    int rangeMin = -1;//to be set in the loop
+                    int rangeMax = -1;//to be set in the loop
+                    id = Integer.parseInt(menu.substring(1));//Takes the rest of characters of the input value
+                    //Using for loop to get the range of processes we would like to delete
+                    for (int i = 0; i < process.size(); i++) {//i=0,1,2..total of processes
+                        if ((rangeMin < 0) && (process.get(i).getID() == id)) {//Get the first process we need to delete
+                            rangeMin = i;
+                        } else if (((rangeMax < 0)//Get the las process we need to delete
+                                && (process.get(i).getID() != id)
+                                && (rangeMin >= 0))) {
+                            rangeMax = i;
+                        } else if (i + 1 == process.size() && (rangeMax < 0)) {//Get the las process we need to delete
+                            rangeMax = i + 1;
+                        }
                     }
-                }
                     //Using the removeRange method to take out given values from the ArrayList
                     process.removeRange(rangeMin, rangeMax);
-                    memoryUsed-=rangeMax-rangeMin;//Update memory available
+                    memoryUsed -= rangeMax - rangeMin;//Update memory available
                     memory.buildMemory(process);//Re-construct the memory according to processes deleted
-
+                }
+                catch (ArrayIndexOutOfBoundsException e){
+                    System.out.println("Invalid option. Please select another one\n");
+                }
             }
             else//Wrong input
                 System.out.println("Input is not valid. Try again\n");
