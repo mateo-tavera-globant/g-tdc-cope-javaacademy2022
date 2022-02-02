@@ -1,16 +1,19 @@
 package topic_1_design_patterns.exercise2;
+
+
 //Observer object
 public class User implements Observer{
 
-    private Product1 product1;
-    public User(Product1 product1) {
-        this.product1 = product1;
+    private Product product;
+
+     User(Product product) {
+        this.product = product;
     }
+
 
     @Override
     public void update() {
-        System.out.println("Price has changed to " + product1.getPrice());
-
-
+        System.out.println(product.getName() + " price has changed to " + product.getPrice());
     }
+
 }

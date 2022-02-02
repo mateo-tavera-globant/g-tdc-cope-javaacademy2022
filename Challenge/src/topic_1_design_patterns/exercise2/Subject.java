@@ -5,7 +5,7 @@ import java.util.List;
 
 //Observable object
 //Subject
-public class Subject {
+public abstract class Subject {
 
     private List<Observer> users = new ArrayList<>();
 
@@ -21,9 +21,5 @@ public class Subject {
         for (Observer user:users)
             user.update();
     }
-
-
-
-
 
 }
