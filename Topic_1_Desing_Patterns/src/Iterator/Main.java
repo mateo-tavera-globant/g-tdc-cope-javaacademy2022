@@ -1,6 +1,6 @@
 package Iterator;
 
-/** USed to acces to he container's elements
+/** Use to access to the container's elements
  * History. "Go back button"
  */
 public class Main {
