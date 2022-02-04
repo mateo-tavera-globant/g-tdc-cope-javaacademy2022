@@ -1,20 +1,22 @@
 package Creational.Builder;
 
 /**
- * Separate the construction of an object from its
- * representation
+ * Using Builder
  */
 public class Main {
     public static void main(String[] args) {
 
-        Presentation presentation = new Presentation();
+        RobotBuilder blueprints = new Blueprints();//Specs or blueprint
+        RobotEngineer robotEngineer = new RobotEngineer(blueprints);//Engineer needs blueprints
 
-        presentation.addSlide(new Slide("Slide 1"));
-        presentation.addSlide(new Slide("Slide 2"));
+        robotEngineer.makeRobot();
+        Robot firstRobot = robotEngineer.getRobot();
 
-        var builder = new PdfDocumentBuilder();
-        presentation.export(builder);
-        var pdf = builder.getPdfDocument();
+        System.out.println(firstRobot.getRobotArms());
+        System.out.println(firstRobot.getRobotTorso());
+        System.out.println(firstRobot.getRobotLegs());
+        System.out.println(firstRobot.getRobotHead());
 
     }
 }
+
