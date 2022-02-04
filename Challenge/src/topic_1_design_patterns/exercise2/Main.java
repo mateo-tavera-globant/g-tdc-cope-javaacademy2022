@@ -14,15 +14,15 @@ public class Main {
         Product product2 = new Product();
         Product product3 = new Product();
         //Create the users
- //       Scanner scanner = new Scanner(System.in);//Create prompt input
-//        String menu = "0";
-
-//        while (!menu.equals("-1")){
-//            User user = new User(product1);
-//            System.out.println("Press 1 to user or press enter to end");
-//            menu = scanner.next();
-//        }
-
+        Scanner scanner = new Scanner(System.in);//Create prompt input
+        String menu = " ";
+/*
+          while (!menu.equals("0")){
+               User user = new User(product1);
+                System.out.println("Press 1 to ");
+              menu = scanner.next();
+           }
+*/
 
 
         User user1 = new User(product1);
