@@ -1,39 +1,33 @@
 package topic_1_design_patterns.exercise1;
 
-public class Blueprints implements RobotBuilder{
+public class Blueprints implements MusicDeviceBuilder{
 
-    private Robot robot;
+    private MusicDevice musicDevice;
 
     Blueprints(){
-        this.robot = new Robot();
-    }
-
-
-    @Override
-    public void buildRobotHead() {
-        robot.setRobotHead("Tin head");
+        this.musicDevice = new MusicDevice();
     }
 
     @Override
-    public void buildRobotTorso() {
-        robot.setRobotTorso("Tin torso");
-
+    public void buildMusicDeviceStorage() {
+        musicDevice.setDeviceStorage("8Gb");
     }
 
     @Override
-    public void buildRobotArms() {
-        robot.setRobotArms("Blowtorch arms");
+    public void buildRobotMusicDeviceColor() {
+        musicDevice.setDeviceColor("Green");
 
     }
 
     @Override
-    public void buildRobotLegs() {
-        robot.setRobotLegs("Roller skates legs");
+    public void buildMusicDeviceBatteryAutonomy() {
+        musicDevice.setDeviceBatterAutonomy("8 hours");
 
     }
 
+
     @Override
-    public Robot getRobot() {
-        return this.robot;
+    public MusicDevice getMusicDevice() {
+        return this.musicDevice;
     }
 }
