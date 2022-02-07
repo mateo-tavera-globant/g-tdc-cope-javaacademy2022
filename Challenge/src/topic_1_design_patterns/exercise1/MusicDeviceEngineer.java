@@ -1,8 +1,10 @@
 package topic_1_design_patterns.exercise1;
 
 public class MusicDeviceEngineer {
-
-    private Blueprints musicDeviceBuilder;
+    //Creates a device with the fields set by the builder
+    //Director
+    String storage;
+    private Blueprints musicDeviceBuilder;//Factory
 
     public MusicDeviceEngineer(Blueprints musicDeviceBuilder) {
         this.musicDeviceBuilder = musicDeviceBuilder;

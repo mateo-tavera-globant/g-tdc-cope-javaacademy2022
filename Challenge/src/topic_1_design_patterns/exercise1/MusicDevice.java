@@ -2,6 +2,7 @@ package topic_1_design_patterns.exercise1;
 
 public class MusicDevice implements MusicDevicePlan{
 
+    //Required parts for the device
     private String musicDeviceStorage;
     private String musicDeviceColor;
     private String musicDeviceBatteryAutonomy;
