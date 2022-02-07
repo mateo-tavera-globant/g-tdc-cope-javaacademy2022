@@ -7,8 +7,7 @@ import java.util.List;
 //Subject
 public abstract class Subject {
 
-    private List<Observer> users = new ArrayList<>();
-
+    private  List<Observer> users = new ArrayList<>();
 
     public void addObserver(Observer observer){
         users.add(observer);
