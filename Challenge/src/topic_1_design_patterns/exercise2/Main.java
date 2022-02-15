@@ -1,10 +1,5 @@
 package topic_1_design_patterns.exercise2;
 
-import topic_1_design_patterns.exercise3.ExtraBacon;
-import topic_1_design_patterns.exercise3.ExtraChips;
-import topic_1_design_patterns.exercise3.ExtraPineapple;
-import topic_1_design_patterns.exercise3.ExtraSauce;
-
 import java.util.Scanner;
 /**
  * Using Observer pattern
