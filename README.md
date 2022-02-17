@@ -13,6 +13,6 @@ Every week we have several exercises to discuss the topic of the week. Each exer
 
 ## Challenges
 Finally, in order to test the knowledge adquired, there are some challenges proposed that are listed in the following folder:\
-[Challenges](https://github.com/mateo-tavera/g-tdc-cope-javaacademy2022/tree/main/Challenge)
+[Challenges](https://github.com/mateo-tavera/g-tdc-cope-javaacademy2022/tree/main/Challenge/src)
 
 ### note: every folder is updated every week with new content
