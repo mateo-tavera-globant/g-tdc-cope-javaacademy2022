@@ -19,12 +19,9 @@ public class Main {
                 .isEmailValid()
                 .and(CustomerRegistrationValidator.isPhoneNumberValid())
                 .and(CustomerRegistrationValidator.isAdult())
-                .and(customer);
+                .and((CustomerRegistrationValidator) customer);
 
         System.out.println(result);
 
-        if (result != SUCCESS){
-            throw new IllegalStateException(result.name());
-        }
     }
 }

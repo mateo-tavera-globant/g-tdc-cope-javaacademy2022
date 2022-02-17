@@ -24,7 +24,13 @@ public class Main {
                 .filter(femalePredicate)
                 .collect((Collectors.toList()))
                 .forEach(System.out::println);
+
+
+
         }
+
+
+
 
     }
 
