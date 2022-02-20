@@ -1,4 +1,4 @@
-package topic_3_functional_programming;
+package topic_3_functional_programming.taylorseries;
 
 import java.util.Scanner;
 import java.util.function.BiFunction;
@@ -34,7 +34,7 @@ public class Main {
             };
 
     //Implementing QuadFunction interface and recursion to execute the Taylor series
-    static QuadFunction<Integer,Integer,BiFunction,QuadFunction,Double> expTaylor = (n, x,factorial, exp)
+    static QuadFunction<Integer,Integer,BiFunction,QuadFunction,Double> expTaylor = (n, x, factorial, exp)
             -> {
         return (n > 0) ? (Math.pow(x, n) /
                 (Double) factorial.apply(n, factorial))
