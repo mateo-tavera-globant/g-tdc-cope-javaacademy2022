@@ -1,4 +1,4 @@
-package topic_3_functional_programming.taylorseries;
+package topic_3_functional_programming.taylor_series;
 
 import java.util.Objects;
 import java.util.function.Function;
