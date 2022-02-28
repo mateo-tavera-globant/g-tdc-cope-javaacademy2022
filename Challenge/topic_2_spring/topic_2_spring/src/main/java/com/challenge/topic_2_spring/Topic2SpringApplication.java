@@ -10,9 +10,6 @@ public class Topic2SpringApplication {
 
 		SpringApplication.run(Topic2SpringApplication.class, args);
 
-		Printer nr = new PrinterBNnC();
-
-		System.out.println(nr.print());
 
 
 	}
