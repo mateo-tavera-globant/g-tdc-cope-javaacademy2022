@@ -5,6 +5,7 @@
 public class Main {
 
     public static void main(String[] args) {
+
         System.out.println("Hello World!");
     }
 
@@ -20,9 +21,6 @@ public class Main {
 
         docker pull: downloads the image
         docker run: downloads and runs the image
-
-
-
 
      */
 }

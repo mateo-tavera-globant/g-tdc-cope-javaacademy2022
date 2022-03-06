@@ -1,12 +1,11 @@
-
 #Use the OpenJDK latest version as the base image
-FROM openjdk:latest
+FROM openjdk:11
 
 #Create a new app directory for my application files
-RUN mkdir /app
+#RUN mkdir /app
 
 #Copy the app files from host to image files
-COPY out/production/Topic_4_Docker/ /app
+COPY src/ /app
 
 #Set directory for executing future commands
 WORKDIR /app
