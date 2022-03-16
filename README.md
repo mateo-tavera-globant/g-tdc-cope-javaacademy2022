@@ -19,6 +19,7 @@ Finally, in order to test the knowledge adquired, there are some challenges prop
 [Challenge 1](https://github.com/mateo-tavera/g-tdc-cope-javaacademy2022/tree/main/Challenge/src/topic_1_design_patterns)\
 [Challenge 2](https://github.com/mateo-tavera/g-tdc-cope-javaacademy2022/tree/main/Challenge/topic_2_spring)\
 [Challenge 3](https://github.com/mateo-tavera/g-tdc-cope-javaacademy2022/tree/main/Challenge/src/topic_3_functional_programming)\
-[Challenge 4](https://github.com/mateo-tavera/g-tdc-cope-javaacademy2022/tree/main/Challenge/src/topic_4_docker)
+[Challenge 4](https://github.com/mateo-tavera/g-tdc-cope-javaacademy2022/tree/main/Challenge/src/topic_4_docker)\
+[Challenge 5](https://github.com/mateo-tavera/g-tdc-cope-javaacademy2022/tree/main/Challenge/topic_5_jpa/topic_5_jpa)
 
 ### note: every folder is updated every week with new content
